@@ -44,6 +44,7 @@
     ;; electric-layout-mode doesn't play nice with smartparens
     (setq-local electric-layout-rules '((?\; . after)))
     (setq mode-name "JS2")
+    (setq-local c-basic-offset 2)
     (js2-imenu-extras-mode +1)
     (subword-mode +1))
 

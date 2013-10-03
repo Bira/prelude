@@ -2,16 +2,22 @@
 ;;; Commentary:
 ;;; Code:
 (global-linum-mode)
-(prelude-ensure-module-deps '(go-mode rbenv rubocop ruby-hash-syntax))
+(prelude-ensure-module-deps '(go-mode
+                              rbenv
+                              rubocop
+                              ruby-hash-syntax
+                              color-theme-solarized))
 (if (file-exists-p "/opt/boxen/rbenv") (setq rbenv-installation-dir "/opt/boxen/rbenv"))
 (global-rbenv-mode)
 (if (window-system) (server-start))
 (set-frame-font "Source Code Pro-18")
+(load-theme 'solarized-light t)
 (setq exec-path (cons (getenv "PATH") exec-path))
 (global-set-key "\M-g" 'goto-line)
 (add-hook 'ruby-mode-hook
           '(lambda ()
              (local-set-key (kbd "RET") 'newline-and-indent)
+             (setq whitespace-line-column 100)
              (whitespace-mode)
              (flycheck-mode)))
 (add-hook 'before-save-hook 'delete-trailing-whitespace)

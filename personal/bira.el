@@ -11,7 +11,7 @@
 (if (file-exists-p "/opt/boxen/rbenv") (setq rbenv-installation-dir "/opt/boxen/rbenv"))
 (global-rbenv-mode)
 (if (window-system) (server-start))
-(set-frame-font "Source Code Pro-18")
+(set-frame-font "Source Code Pro-13")
 (load-theme 'solarized-light t)
 (setq exec-path (cons (getenv "PATH") exec-path))
 (global-set-key "\M-g" 'goto-line)

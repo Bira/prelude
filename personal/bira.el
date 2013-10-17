@@ -3,6 +3,7 @@
 ;;; Code:
 (global-linum-mode)
 (prelude-ensure-module-deps '(go-mode
+                              elixir-mode
                               rbenv
                               rubocop
                               ruby-hash-syntax

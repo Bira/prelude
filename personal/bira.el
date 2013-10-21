@@ -11,7 +11,7 @@
 (if (file-exists-p "/opt/boxen/rbenv") (setq rbenv-installation-dir "/opt/boxen/rbenv"))
 (global-rbenv-mode)
 (if (window-system) (server-start))
-(if (> 1920 (display-pixel-width))
+(if (> (display-pixel-width) 1920)
     (set-frame-font "Source Code Pro-18")
   (set-frame-font "Source Code Pro-13"))
 (load-theme 'solarized-light t)

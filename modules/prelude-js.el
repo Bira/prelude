@@ -44,6 +44,7 @@
 (eval-after-load 'js2-mode
   '(progn
      (defun prelude-js-mode-defaults ()
+       (setq c-basic-offset 2)
        ;; electric-layout-mode doesn't play nice with smartparens
        (setq-local electric-layout-rules '((?\; . after)))
        (setq mode-name "JS2")

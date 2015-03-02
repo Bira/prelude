@@ -19,6 +19,7 @@
 (global-set-key "\M-g" 'goto-line)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'ruby-mode-hook (lambda() (whitespace-mode -1)))
+(add-hook 'html-mode-hook (lambda() (whitespace-mode -1)))
 (setq prelude-guru nil)
 (define-key global-map [home] 'beginning-of-line)
 (define-key global-map [end] 'end-of-line)

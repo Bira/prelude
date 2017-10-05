@@ -27,7 +27,8 @@
       ido-use-url-at-point nil
       ruby-use-smie t
       ruby-deep-arglist nil
-      ruby-deep-indent-paren nil)
+      ruby-deep-indent-paren nil
+      ruby-insert-encoding-magic-comment nil)
 (define-key global-map [home] 'beginning-of-line)
 (define-key global-map [end] 'end-of-line)
 (setq-default fill-column 80)

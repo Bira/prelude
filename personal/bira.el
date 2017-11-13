@@ -20,6 +20,7 @@
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 (add-hook 'gfm-mode-hook 'turn-on-auto-fill)
 (add-to-list 'auto-mode-alist '("\\.prawn\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.slm\\'" . slim-mode))
 (add-hook 'html-mode-hook (lambda() (whitespace-mode -1)))
 (setq prelude-guru nil
       prelude-auto-save nil

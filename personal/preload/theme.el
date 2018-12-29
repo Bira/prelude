@@ -1,1 +1,1 @@
-(setq prelude-theme 'solarized-dark)
+(setq prelude-theme 'doom-city-lights)

@@ -1,1 +1,1 @@
-(setq prelude-theme 'doom-city-lights)
+(setq prelude-theme 'doom-opera)

@@ -3,12 +3,13 @@
 ;;; Code:
 (require 'iso-transl)
 (global-linum-mode)
-(prelude-require-packages '(go-mode
-                            elixir-mode
+(prelude-require-packages '(add-node-modules-path
+                            deadgrep
+                            doom-themes
+                            prettier-js
                             rbenv
                             rubocop
-                            ruby-hash-syntax
-                            color-theme-solarized))
+                            ruby-hash-syntax))
 (global-rbenv-mode)
 (if (window-system) (server-start))
 (set-frame-font "Hack")

@@ -11,7 +11,7 @@
                             color-theme-solarized))
 (global-rbenv-mode)
 (if (window-system) (server-start))
-(set-frame-font "Hack-13")
+(set-frame-font "Hack")
 (setq exec-path (cons (getenv "PATH") exec-path))
 (global-set-key "\M-g" 'goto-line)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)

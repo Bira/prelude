@@ -24,6 +24,8 @@
 (add-hook 'gfm-mode-hook 'turn-on-auto-fill)
 (add-hook 'rust-mode-hook (lambda()
                             (flycheck-mode -1)))
+(add-hook 'slim-mode-hook (lambda()
+                            (whitespace-mode -1)))
 (setq-default flycheck-disabled-checkers
               (append flycheck-disabled-checkers
                       '(javascript-jshint json-jsonlist)))

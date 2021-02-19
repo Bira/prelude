@@ -2,7 +2,6 @@
 ;;; Commentary:
 ;;; Code:
 (require 'iso-transl)
-(global-linum-mode)
 (prelude-require-packages '(add-node-modules-path
                             deadgrep
                             doom-themes

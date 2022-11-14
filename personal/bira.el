@@ -3,7 +3,7 @@
 (setq-default fill-column 80)
 (setq require-final-newline t)
 
-(set-frame-font "Fira Code Retina-10")
+(set-frame-font "Fira Code Retina-12")
 (global-set-key "\M-g" 'goto-line)
 
 (if (window-system) (server-start))
@@ -48,5 +48,13 @@
 (prelude-require-packages '(slim-mode
                             prettier-js))
 (add-to-list 'auto-mode-alist '("\\.slm\\'" . slim-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 
-(setq-default)
+(setq-default flycheck-disabled-checkers
+              (append flycheck-disabled-checkers
+                      '(javascript-jshint json-jsonlist)))
+
+(flycheck-add-mode 'javascript-eslint 'rjsx-mode)
+(add-hook 'rjsx-mode-hook (lambda() (whitespace-mode -1)))
+(add-hook 'rjsx-mode-hook #'add-node-modules-path)
+(add-hook 'rjsx-mode-hook #'prettier-js-mode)

@@ -58,3 +58,6 @@
 (add-hook 'rjsx-mode-hook (lambda() (whitespace-mode -1)))
 (add-hook 'rjsx-mode-hook #'add-node-modules-path)
 (add-hook 'rjsx-mode-hook #'prettier-js-mode)
+
+(add-hook 'slim-mode-hook (lambda ()
+                            (whitespace-mode -1)))

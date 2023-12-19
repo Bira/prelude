@@ -6,7 +6,7 @@
       prelude-guru nil)
 
 
-(setq default-frame-alist '((font . "Fira Code Retina-11")))
+(setq default-frame-alist '((font . "Monaspace Neon-11")))
 (global-set-key "\M-g" 'goto-line)
 
 (if (window-system) (server-start))

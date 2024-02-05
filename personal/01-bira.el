@@ -46,6 +46,11 @@
 
 (prelude-require-package 'rubocop)
 
+;; Rust development
+
+(add-hook 'rust-mode-hook (lambda()
+                            (setq whitespace-line-column 100)))
+
 ;; Front-end development
 
 (prelude-require-packages '(slim-mode

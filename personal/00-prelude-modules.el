@@ -66,7 +66,7 @@
 
 (require 'prelude-c)
 ;; (require 'prelude-clojure)
-;; (require 'prelude-coffee)
+(require 'prelude-coffee)
 ;; (require 'prelude-common-lisp)
 (require 'prelude-css)
 ;; (require 'prelude-dart)
@@ -83,11 +83,11 @@
 (require 'prelude-lsp) ;; Base setup for the Language Server Protocol
 ;; (require 'prelude-lua)
 ;; (require 'prelude-ocaml)
-;;(require 'prelude-perl)
+;; (require 'prelude-perl)
 ;; (require 'prelude-python)
 ;; (require 'prelude-racket)
 (require 'prelude-ruby)
-;; (require 'prelude-rust)
+(require 'prelude-rust)
 ;; (require 'prelude-scala)
 ;; (require 'prelude-scheme)
 (require 'prelude-shell)

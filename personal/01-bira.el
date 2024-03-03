@@ -1,9 +1,11 @@
 (require 'iso-transl)
 
 (setq-default fill-column 80)
-(setq require-final-newline t)
+(super-save-mode -1)
+(setq require-final-newline t
+      prelude-guru nil)
 
-(set-frame-font "Monaspace Neon-12")
+(setq default-frame-alist '((font . "Monaspace Neon-12")))
 (global-set-key "\M-g" 'goto-line)
 
 (if (window-system) (server-start))
@@ -12,7 +14,7 @@
 
 (prelude-require-packages '(doom-themes
                             doom-modeline
-                            all-the-icons))
+                            nerd-icons))
 
 (doom-modeline-mode 1)
 
@@ -46,6 +48,7 @@
 ;; Front-end development
 
 (prelude-require-packages '(slim-mode
+                            rjsx-mode
                             prettier-js))
 (add-to-list 'auto-mode-alist '("\\.slm\\'" . slim-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
@@ -61,3 +64,7 @@
 
 (add-hook 'slim-mode-hook (lambda ()
                             (whitespace-mode -1)))
+;; Writing
+
+(add-hook 'org-mode-hook 'turn-on-auto-fill)
+(add-hook 'markdown-mode-hook 'turn-on-auto-fill)

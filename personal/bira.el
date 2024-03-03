@@ -3,7 +3,7 @@
 (setq-default fill-column 80)
 (setq require-final-newline t)
 
-(set-frame-font "Fira Code Retina-12")
+(set-frame-font "Monaspace Neon-12")
 (global-set-key "\M-g" 'goto-line)
 
 (if (window-system) (server-start))

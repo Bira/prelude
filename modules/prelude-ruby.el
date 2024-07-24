@@ -32,7 +32,13 @@
 
 (require 'prelude-programming)
 
-(prelude-require-packages '(inf-ruby yari))
+(prelude-require-packages '(inf-ruby
+                            yari
+                            tree-sitter
+                            tree-sitter-langs))
+
+(require 'tree-sitter)
+(require 'tree-sitter-langs)
 
 ;; We never want to edit Rubinius bytecode
 (add-to-list 'completion-ignored-extensions ".rbc")
@@ -41,6 +47,8 @@
 (define-key 'help-command (kbd "R") 'yari)
 
 (with-eval-after-load 'ruby-mode
+  (add-hook 'ruby-mode-hook #'tree-sitter-mode)
+  (add-hook 'ruby-mode-hook #'tree-sitter-hl-mode)
   (defun prelude-ruby-mode-defaults ()
     ;; Don't auto-insert encoding comments
     ;; Those are almost never needed in Ruby 2+

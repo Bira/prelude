@@ -52,9 +52,7 @@
   (setq prelude-ruby-mode-hook 'prelude-ruby-mode-defaults)
 
   (add-hook 'ruby-mode-hook (lambda ()
-                              (run-hooks 'prelude-ruby-mode-hook)))
-
-  (add-hook 'ruby-mode-hook 'lsp))
+                              (run-hooks 'prelude-ruby-mode-hook))))
 
 (provide 'prelude-ruby)
 ;;; prelude-ruby.el ends here

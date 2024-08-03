@@ -7,7 +7,7 @@
       prelude-flyspell nil)
 
 
-(setq default-frame-alist '((font . "Monaspace Neon-11")))
+(setq default-frame-alist '((font . "Monaspace Neon-12")))
 (global-set-key "\M-g" 'goto-line)
 
 ;; Theme
@@ -57,6 +57,7 @@
                             prettier-js))
 
 (add-to-list 'auto-mode-alist '("\\.slm\\'" . slim-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 
 (setq-default flycheck-disabled-checkers
               (append flycheck-disabled-checkers

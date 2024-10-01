@@ -7,7 +7,7 @@
       prelude-flyspell nil)
 
 
-(setq default-frame-alist '((font . "Monaspace Neon-12")))
+(setq default-frame-alist '((font . "Monaspace Neon-11")))
 (global-set-key "\M-g" 'goto-line)
 
 ;; Theme

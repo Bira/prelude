@@ -18,6 +18,16 @@
 
 (doom-modeline-mode 1)
 
+(defun switch-prelude-theme ()
+  (interactive)
+  (if (eq prelude-theme-type 'light)
+      (setq prelude-theme-type 'dark)
+    (setq prelude-theme-type 'light)
+    )
+  (disable-theme prelude-theme)
+  (setq prelude-theme (cdr (assoc prelude-theme-type prelude-themes)))
+  (load-theme prelude-theme t)
+  )
 
 ;; Deadgrep
 

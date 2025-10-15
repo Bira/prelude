@@ -7,5 +7,5 @@
 
 (defvar prelude-themes
   '((light . doom-tomorrow-day)
-    (dark  . doom-tomorrow-night)))
+    (dark  . doom-palenight)))
 (setq prelude-theme (cdr (assoc prelude-theme-type prelude-themes)))

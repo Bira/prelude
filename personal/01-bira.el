@@ -1,5 +1,20 @@
 (require 'iso-transl)
 
+;; Disable bidirectional text scanning (comment this out if you need it)
+(setq-default bidi-display-reordering 'left-to-right
+              bidi-paragraph-direction 'left-to-right)
+(setq bidi-inhibit-bpa t)
+
+;; Skip fontification during input (for performance)
+(setq redisplay-skip-fontification-on-input t)
+
+;; Increase Process Output Buffer for LSP
+(setq read-process-output-max (* 4 1024 1024))
+
+;; Kill ring tweaks
+(setq save-interprogram-paste-before-kill t)
+(setq kill-do-not-save-duplicates t)
+
 (setq-default fill-column 80)
 (super-save-mode -1)
 (setq require-final-newline t

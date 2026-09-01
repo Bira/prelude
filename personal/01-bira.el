@@ -60,7 +60,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.prawn\\'" . ruby-mode))
 
-(setq ruby-use-smie t
+(setq ruby-use-smie nil
       ruby-deep-arglist nil
       ruby-deep-indent-paren nil
       ruby-insert-encoding-magic-comment nil)

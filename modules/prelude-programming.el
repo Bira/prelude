@@ -99,5 +99,7 @@
 (add-hook 'makefile-mode-hook (lambda ()
                                 (run-hooks 'prelude-makefile-mode-hook)))
 
+(prelude-require-package 'ligature)
+
 (provide 'prelude-programming)
 ;;; prelude-programming.el ends here

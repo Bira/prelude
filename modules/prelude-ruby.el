@@ -44,8 +44,7 @@
   (setq ruby-insert-encoding-magic-comment nil)
   (inf-ruby-minor-mode +1)
   ;; CamelCase aware editing operations
-  (subword-mode +1)
-  (prelude-lsp-enable))
+  (subword-mode +1))
 
 ;; Run a Ruby REPL (IRB/Pry) inside Emacs and send code to it
 (use-package inf-ruby
@@ -64,6 +63,5 @@
                             (run-hooks 'prelude-ruby-mode-hook)))
 (add-hook 'ruby-ts-mode-hook (lambda ()
                                (run-hooks 'prelude-ruby-mode-hook)))
-
 (provide 'prelude-ruby)
 ;;; prelude-ruby.el ends here
